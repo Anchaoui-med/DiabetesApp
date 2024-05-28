@@ -3,10 +3,6 @@ import pandas as pd
 import pickle
 
 
-
-
-
-
 st.markdown("""
 
     <h1 style='text-align: center;'>Diabetes Prediction App</h1>
@@ -40,11 +36,11 @@ def user_input_features():
 	
 df = user_input_features()
 
-st.subheader(" **Parameters**")
+st.subheader('Parameters')
 st.dataframe(df, hide_index=True)
 
 # Load the model
-model_diabetes = pickle.load(open("model.pkl", "rb"))
+model_diabetes = pickle.load(open('model.pkl', 'rb'))
 
 # Predict
 prediction = model_diabetes.predict(df)
@@ -53,10 +49,7 @@ prediction_proba = model_diabetes.predict_proba(df)
 st.subheader('Prediction')
 st.write(prediction)
 st.markdown("""
-
    <p style='text-align: center; font-size: 12px;'>0 : non-diabetic &emsp;1: Diabetic</p>
-    
-  
 """, unsafe_allow_html=True)
 
 st.subheader('Prediction Probability')
