@@ -1,9 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
-import subprocess
 
-subprocess.call(['sh', 'start.sh'])
 
 st.markdown("""
 
