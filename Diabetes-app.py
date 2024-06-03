@@ -1,3 +1,6 @@
+import sys
+sys.path = sorted(sys.path, key=lambda x: 'site-packages' in x)
+
 import streamlit as st
 import pandas as pd
 import pickle
